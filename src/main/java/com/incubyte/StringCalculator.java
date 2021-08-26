@@ -6,12 +6,18 @@ import java.util.Arrays;
  * String Calculator class for basic operations
  */
 public class StringCalculator{
+    private int count = 0;
     public int add(String numbers) {
 
         if(StringUtils.isEmpty(numbers)) {
             return 0;
         }
+        incrementCount();
+
         return sum(StringUtils.getNums(numbers));
+    }
+    private void incrementCount() {
+        count += 1;
     }
 
     private int sum(int[] numbs) {
