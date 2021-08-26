@@ -19,6 +19,12 @@ class StringCalculatorTest{
     }
 
     @Test
+    void multipleNumSpecifiedDelimiter(){
+        Assert.assertEquals(5, stringCalculator.add("//;\n2;3")
+        );
+    }
+
+    @Test
     void multipleSeparatedByCommaNewLine(){
         Assert.assertEquals(6, stringCalculator.add("1\n2,3"));
     }
