@@ -19,6 +19,10 @@ class StringCalculatorTest{
     }
 
     @Test
+    void singleIntegerTest(){
+        Assert.assertEquals(1, stringCalculator.add("1"));
+    }
+    @Test
     void nullTest(){
         Assert.assertEquals(0, stringCalculator.add(null));
     }
