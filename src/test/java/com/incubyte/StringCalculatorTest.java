@@ -18,6 +18,10 @@ class StringCalculatorTest{
         stringCalculator = new StringCalculator();
     }
 
+    @Test
+    void multipleSeparatedByCommaNewLine(){
+        Assert.assertEquals(6, stringCalculator.add("1\n2,3"));
+    }
 
     @Test
     void multipleNumbersTest(){
