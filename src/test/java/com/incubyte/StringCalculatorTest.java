@@ -19,6 +19,13 @@ class StringCalculatorTest{
     }
 
     @Test
+    void twoNumSeparatedCommaTest() {
+        Assert.assertEquals(5, stringCalculator.add("2, 3")
+        );
+    }
+
+
+    @Test
     void singleIntegerTest(){
         Assert.assertEquals(1, stringCalculator.add("1"));
     }
