@@ -19,6 +19,13 @@ class StringCalculatorTest{
     }
 
     @Test
+    void OperationsTest() {
+        stringCalculator = new StringCalculator();
+        stringCalculator.add("1");
+        stringCalculator.add("1,2");
+    }
+
+    @Test
     void negNot(){
         UnsupportedOperationException ex = Assert.assertThrows(UnsupportedOperationException.class,() -> stringCalculator.add("-1,0,1"));
         Assert.assertEquals("Negative number(s) [-1] are not supported", ex.getMessage());
@@ -60,5 +67,11 @@ class StringCalculatorTest{
     void emptyTest(){
         Assert.assertEquals(0, stringCalculator.add("")
         );
+    }
+    @Test
+    void operationsTest() {
+        stringCalculator = new StringCalculator();
+        stringCalculator.add("1");
+        stringCalculator.add("1,2");
     }
 }

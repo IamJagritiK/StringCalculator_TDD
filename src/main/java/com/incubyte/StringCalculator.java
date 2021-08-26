@@ -26,5 +26,7 @@ public class StringCalculator{
             throw new UnsupportedOperationException(message);
         }
     }
+
+
 }
 
