@@ -18,12 +18,17 @@ class StringCalculatorTest{
         stringCalculator = new StringCalculator();
     }
 
+
+    @Test
+    void multipleNumbersTest(){
+        Assert.assertEquals(18, stringCalculator.add("5,6,7"));
+        Assert.assertEquals(6, stringCalculator.add("0,1,2,3"));
+    }
     @Test
     void twoNumSeparatedCommaTest() {
         Assert.assertEquals(5, stringCalculator.add("2, 3")
         );
     }
-
 
     @Test
     void singleIntegerTest(){
