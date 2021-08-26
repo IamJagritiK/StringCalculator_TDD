@@ -19,6 +19,21 @@ class StringCalculatorTest{
     }
 
     @Test
+    void delimiterInBracketTest(){
+        Assert.assertEquals(3, stringCalculator.add("//[***]\n1***2")
+        );
+    }
+
+    @Test
+    void multipleDelimiterInBracketTest(){
+        Assert.assertEquals(6, stringCalculator.add("//[*][%]\n1*2%3"));
+    }
+
+    @Test
+    void delimitersInBracketsTest(){
+        Assert.assertEquals(6, stringCalculator.add("//[**][%%]\n1**2%%3"));
+    }
+    @Test
     void OperationsTest() {
         stringCalculator = new StringCalculator();
         stringCalculator.add("1");
