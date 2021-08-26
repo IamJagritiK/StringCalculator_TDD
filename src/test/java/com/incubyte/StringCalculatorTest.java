@@ -10,7 +10,7 @@ import org.junit.Test;
  * test class for String Calculator
  */
 class StringCalculatorTest{
-    
+
     private static StringCalculator stringCalculator;
 
     @Before
