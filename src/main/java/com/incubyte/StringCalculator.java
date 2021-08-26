@@ -1,5 +1,7 @@
 package main.java.com.incubyte;
 
+import java.util.Arrays;
+
 /**
  * String Calculator class for basic operations
  */
@@ -13,7 +15,7 @@ public class StringCalculator{
     }
 
     private int sum(int[] numbs) {
-        return 0;
+        return Arrays.stream(numbs).sum();
     }
 
 }
