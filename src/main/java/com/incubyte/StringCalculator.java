@@ -6,7 +6,15 @@ package main.java.com.incubyte;
 public class StringCalculator{
     public int add(String numbers) {
 
-        return 0;
-
+        if(StringUtils.isEmpty(numbers)) {
+            return 0;
+        }
+        return sum(StringUtils.getNums(numbers));
     }
+
+    private int sum(int[] numbs) {
+        return 0;
+    }
+
 }
+
