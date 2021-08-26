@@ -11,7 +11,7 @@ public class StringUtils {
     }
 
     public static int[] getNums(String num) {
-        String[] numsSplit = num.split(",");
+        String[] numsSplit = num.split("[,\n]");
         int[] numbers = new int[numsSplit.length];
         for (int i : numbers) {
             numbers[i] = parInt(numsSplit[i]);
