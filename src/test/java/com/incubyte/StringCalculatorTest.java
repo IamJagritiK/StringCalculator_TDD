@@ -19,6 +19,13 @@ class StringCalculatorTest{
     }
 
     @Test
+    void negNot(){
+        UnsupportedOperationException ex = Assert.assertThrows(UnsupportedOperationException.class,() -> stringCalculator.add("-1,0,1"));
+        Assert.assertEquals("Negative number(s) [-1] are not supported", ex.getMessage());
+    }
+
+
+    @Test
     void multipleNumSpecifiedDelimiter(){
         Assert.assertEquals(5, stringCalculator.add("//;\n2;3")
         );

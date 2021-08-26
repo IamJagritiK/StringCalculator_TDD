@@ -15,8 +15,16 @@ public class StringCalculator{
     }
 
     private int sum(int[] numbs) {
+        getValidInput(numbs);
         return Arrays.stream(numbs).sum();
     }
 
+    private void getValidInput(int[] nums) {
+        int[] ngt = Arrays.stream(nums).filter(x -> x < 0).toArray();
+        if(ngt.length != 0) {
+            String message = String.format("Negative no. %s are not supported", Arrays.toString(ngt));
+            throw new UnsupportedOperationException(message);
+        }
+    }
 }
 
