@@ -1,7 +1,12 @@
-package com.incubyte;
+package main.java.com.incubyte;
 
-class StringCalculator{
+/**
+ * String Calculator class for basic operations
+ */
+public class StringCalculator{
     public int add(String numbers) {
+
         return 0;
+
     }
 }
