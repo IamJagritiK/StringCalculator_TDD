@@ -27,7 +27,12 @@ public class StringUtils {
             return 0;
         }
     }
-    private static ParsedInput parseInputString(String input) {
-        return null;
+    private static ParsedInput parseInputString(String inp) {
+        if(!inp.startsWith("//")){
+            return ParsedInput.of("[,\n]", inp);
+        }
+        String[] parts = inp.split("\n");
+        return ParsedInput.of( parts[0].substring(2), parts[1]);
+
     }
 }
